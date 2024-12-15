@@ -7,12 +7,12 @@ function setup() {
   finalProject = new project ()
   x=random(0,width);
   y=random(0,height);
-  radius = random(30,100)
+  radius = random(30,100);
 
   xDir = random(-2,2);
   yDir = random(-2,2);
   
-  speed = 2
+  speed = 2;
   
   numShapes = 10;
   circleSize = width-300;
@@ -58,10 +58,10 @@ function setup() {
 
 function draw () {
   background(30,30,10,1);
-  r = random(10,255)
-  g = random(10,255)
-  b = random(10,255)
-  colorAdjust = random(30,100)
+  r = random(10,255);
+  g = random(10,255);
+  b = random(10,255);
+  colorAdjust = random(30,100);
   fill (r+colorAdjust,g+colorAdjust,b+colorAdjust);
   strokeWeight(1);
   circle(x,y,radius);
@@ -75,7 +75,7 @@ function draw () {
   line(0,row3,width,row3);
   
   
-  push()
+  push();
   rectMode(CORNER);
   translate(colum3,row3);
   rotate(angleShape2);
@@ -91,13 +91,13 @@ function draw () {
   angleShape2 += 2;
   angleShape3 += 4;
   
-  if((x > width)||(x < 0))
+  if((x > width)||(x < 0));
     {
-      xDir = -xDir
+      xDir = -xDir;
     }
-  if((y > height)||(y<0))
+  if((y > height)||(y<0));
     {
-      yDir = -yDir
+      yDir = -yDir;
     }
   
   x += xDir*speed;
@@ -109,7 +109,7 @@ function draw () {
       fill(myColor[i]);
       strokeWeight(2);
       stroke(190,56,200);
-      circle(posX+offSet*i,posY,circleSize-space*i)
+      circle(posX+offSet*i,posY,circleSize-space*i);
       
     }
   mySignature();
@@ -118,7 +118,7 @@ function draw () {
 
 }
   
-  function display()
+  function display();
 {
   stroke('white');
   strokeWeight(2);
@@ -128,29 +128,29 @@ function draw () {
   y1 = y2;
 }
 
-  function walkingDirection()
+  function walkingDirection();
 {
   let nextPos = floor(random(4));
   if (nextPos ==0){
     x2 = x1 + distance;
   }
-  else if(nextPos == 1)
+  else if(nextPos == 1);
     {
       x2 = x1 - distance;
     }
-  else if(nextPos == 2)
+  else if(nextPos == 2);
     {
       y2 = y1 + distance;
     }
-  else if(nextPos == 3)
+  else if(nextPos == 3);
     {
       y2 = y1 - distance;
     }
 }
   
-  function keepInCanvas()
+  function keepInCanvas();
 {
-  if(x2 < 0)
+  if(x2 < 0);
     {
       x2 = 0;
     }
@@ -158,17 +158,17 @@ function draw () {
     {
       x2 = width;
     }
-  if(y2 < 0)
+  if(y2 < 0);
     {
       y2 = 0;
     }
-  else if (y2 > height)
+  else if (y2 > height);
     {
       y2 = height;
     }
 }
 
-function mySignature()
+function mySignature();
 {
   textSize(12);
   strokeWeight(1);
